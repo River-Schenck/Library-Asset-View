@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Libraries</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <script src="brands.js"></script>
+    <script src="libraries.js"></script>
+</head>
+<body onload="getLibrary()">
+    <div class="container md">
+        <form onsubmit="event.preventDefault() & librarySelected(document.getElementById('selectForm').value,document.getElementById('maxImages').value)" id="myform">
+            <select id="selectForm" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Select a Library to display</option>
+            </select>
+            <label for="textid">Max Number of Images</label>
+            <input type="number" id="maxImages" name="maxImages" value="10">
+            <input type="submit" value="submit" class="btn btn-outline-primary">
+        </form>
+    </div>
+    <br>
+    <div class="container" id="imgContainer"></div>
+
+</body>
+</html>
